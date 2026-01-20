@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# But don't ignore these specific files
+!README.MD
+!README.md  # Also include lowercase version just in case
+!index.html
+!privacy-policy.html
+!data-safety.html
+
+# Don't ignore the .gitignore itself (optional but recommended)
+!.gitignore
