@@ -17,9 +17,9 @@ A fast-paced, local multiplayer social deduction game designed for friends and f
 - 🔒 **Privacy Focused:** No data leaves your device. Play offline, anywhere!
 
 ## 📜 Legal & Privacy
-- [Privacy Policy](privacy-policy.html)
-- [Data Safety](data-safety.html)
-- [Terms of Service](index.html)
+- [Privacy Policy](https://ahmadmorningstar.github.io/ImposterWho/privacy-policy.html)
+- [Data Safety](https://ahmadmorningstar.github.io/ImposterWho/data-safety.html)
+- [Terms of Service](https://ahmadmorningstar.github.io/ImposterWho/index.html)
 
 ---
 Developed with ❤️ by **Ahmad Morningstar**.
