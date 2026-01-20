@@ -1,4 +1,4 @@
-# 🕵️‍♂️ Imposter Who? (کێ جۆکەرە؟)
+# 🕵️‍♂️ Imposter Who? (کێ دژمنە؟)
 
 [![Platform](https://img.shields.io/badge/Platform-Android-green?logo=android)](https://play.google.com/store)
 [![License](https://img.shields.io/badge/License-All_Rights_Reserved-red)](#)
