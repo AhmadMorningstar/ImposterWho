@@ -6,7 +6,7 @@
 A fast-paced, local multiplayer social deduction game designed for friends and family! Discover who the imposter is before it's too late. 🚀
 
 ## 📥 Download
-> **[COMING SOON!  Get it on Google Play Store](https://github.com/AhmadMorningstar/ImposterWho/edit/main/README.md)** 👈
+> **[COMING SOON!  Get it on Google Play Store](https://github.com/AhmadMorningstar/ImposterWho)** 👈
 
 ---
 
