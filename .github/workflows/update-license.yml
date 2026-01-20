@@ -1,29 +1,39 @@
-name: Update License Year
+name: Update License Year Range
 
 on:
   schedule:
-    - cron: '0 0 1 1 *' # Runs at 00:00 on January 1st every year
-  workflow_dispatch: # Allows you to run this manually from the "Actions" tab
+    - cron: '0 0 1 1 *' # Runs every Jan 1st
+  workflow_dispatch: # Allows manual testing
 
 jobs:
   update-license:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Needed to push the update back to your repo
+      contents: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Update Year in LICENSE
+      - name: Update Year Range in LICENSE
         run: |
+          START_YEAR="2026"
           CURRENT_YEAR=$(date +'%Y')
-          # This replaces "Copyright (c) [any 4 digits]" with "Copyright (c) $CURRENT_YEAR"
-          sed -i "s/Copyright (c) [0-9]\{4\}/Copyright (c) $CURRENT_YEAR/g" LICENSE
+          
+          if [ "$START_YEAR" == "$CURRENT_YEAR" ]; then
+            # If it's still 2026, keep it as a single year
+            NEW_COPYRIGHT="Copyright (c) $START_YEAR"
+          else
+            # If it's 2027 or later, make it a range: 2026 - 2027
+            NEW_COPYRIGHT="Copyright (c) $START_YEAR - $CURRENT_YEAR"
+          fi
+          
+          # This command finds the copyright line and updates it
+          sed -i "s/Copyright (c) [0-9]\{4\}\( - [0-9]\{4\}\)*/$NEW_COPYRIGHT/g" LICENSE
           
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add LICENSE
-          git diff-index --quiet HEAD || git commit -m "chore: update license year to $(date +'%Y') 📅"
+          git diff-index --quiet HEAD || git commit -m "chore: update license copyright range 📅"
           git push
